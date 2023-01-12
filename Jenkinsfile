@@ -9,15 +9,13 @@ agent any
       }
     }
     stage("Testing docker") {
-      steps {
-	agent {
-    		docker { image 'asciidoctor/docker-asciidoctor' }
-  		}
-	script {
-		docker.inside('-v /root/.m2:/root/.m2') {
+	agent { label 'docker' }
+      	steps {
+		script {
+			docker.image('asciidoctor/docker-asciidoctor' ).inside('-v /root/.m2:/root/.m2') {
               		sh('asciidoctor --help')
-	      	}
-        echo 'testing docker image'
+	      		}
+        	echo 'testing docker image'
 	}
     }
   }
