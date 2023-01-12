@@ -12,7 +12,7 @@ pipeline {
       steps {
 	script {
 	 docker.image('asciidoctor/docker-asciidoctor').inside('-v /root/.m2:/root/.m2') {
-              sh(‘asciidoctor --help)
+              sh(‘asciidoctor --help')
 	      }
         echo 'testing docker image'
       }
