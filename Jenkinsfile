@@ -8,9 +8,13 @@ pipeline {
         echo 'building the application'
       }
     }
-    stage("Test") {
+    stage("Testing docker") {
       steps {
-        echo 'testing the application'
+	script {
+	 docker.image('asciidoctor/docker-asciidoctor').inside('-v /root/.m2:/root/.m2') {
+              sh(‘asciidoctor —help)
+	      }
+        echo 'testing docker image'
       }
     }
   }
