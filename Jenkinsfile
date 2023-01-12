@@ -1,9 +1,9 @@
 pipeline {
 
-  agent any()
+  agent any
 
   stages {
-		stage ('Build - AsciiDoc Document') {
+	stage ('Build - AsciiDoc Document') {
       steps {
           script {
             docker.image('maven:3.6-jdk-12').inside('-v /root/.m2:/root/.m2') {
