@@ -1,8 +1,6 @@
 pipeline {
 
-  agent {
-    docker { image 'asciidoctor/docker-asciidoctor' }
-  }
+agent any
 	
   stages {
     stage("Build") {
@@ -12,8 +10,11 @@ pipeline {
     }
     stage("Testing docker") {
       steps {
+	agent {
+    		docker { image 'asciidoctor/docker-asciidoctor' }
+  		}
 	script {
-		docker.image('asciidoctor/docker-asciidoctor').inside('-v /root/.m2:/root/.m2') {
+		docker.inside('-v /root/.m2:/root/.m2') {
               		sh('asciidoctor --help')
 	      	}
         echo 'testing docker image'
