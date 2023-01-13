@@ -13,7 +13,7 @@ pipeline {
   }
   post {
         always {
-            archiveArtifacts artifacts: 'book.hmtl', onlyIfSuccessful: true
+            archiveArtifacts artifacts: '**', onlyIfSuccessful: true
         }
     }
 }
