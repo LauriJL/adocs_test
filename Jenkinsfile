@@ -1,22 +1,14 @@
 pipeline {
-
-agent any
-	
+  agent { dockerfile true }
   stages {
-    stage("Build") {
+    stage('Test') {
       steps {
-        echo 'building the application'
+        sh '''
+          asciidoctor --version
+          git --version
+          curl --version
+        '''
       }
     }
-    stage("Testing docker") {
-      	steps {
-		script {
-			docker.image('asciidoctor/docker-asciidoctor' ).inside('-v /root/.m2:/root/.m2') {
-              		sh('asciidoctor --help')
-	      		}
-        	echo 'testing docker image'
-	}
-    }
   }
-}
 }
