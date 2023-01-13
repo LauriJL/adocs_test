@@ -1,11 +1,10 @@
 pipeline {
   agent { dockerfile true }
   stages {
-    stage('Test') {
+    stage('Build hmtl doc') {
       steps {
         echo "Current workspace is $WORKSPACE"
         sh '''
-          docker ps
           asciidoctor --version
           asciidoctor book.adoc
         '''
