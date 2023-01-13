@@ -10,10 +10,11 @@ pipeline {
         '''
       }
     }
-  }
-  post {
-        always {
-            archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
-        }
+    stage('Create artifact of html'){
+      steps {
+        archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
+        echo "Artifact created"
+      }
     }
+  }
 }
