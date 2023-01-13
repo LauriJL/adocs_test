@@ -11,4 +11,9 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+      echo ‘Post OK!’
+    }
+  }
 }
