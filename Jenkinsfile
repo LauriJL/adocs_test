@@ -7,7 +7,7 @@ pipeline {
         sh '''
           asciidoctor --version
           asciidoctor book.adoc
-          cp /Users/laurileskinen/.jenkins/workspace/Adoc /Users/laurileskinen/Documents/Programming/adocs_temp
+          cp -r /Users/laurileskinen/.jenkins/workspace/Adoc /Users/laurileskinen/Documents/Programming/adocs_temp
         '''
       }
     }
