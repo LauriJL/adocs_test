@@ -13,11 +13,10 @@ pipeline {
   }
   post {
     always {
-      echo "Post OK!"
       sh '''
-      chmod -R 755 /Users/laurileskinen/Documents/Programming/adocs_temp
-      cp -r /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs_temp
+      archiveArtifacts artifacts: 'book.html'
       '''
+      echo "Post OK!"
     }
   }
 }
