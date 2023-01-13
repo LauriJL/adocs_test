@@ -4,13 +4,10 @@ pipeline {
     stage('Build hmtl doc') {
       steps {
         echo "Current workspace is $WORKSPACE"
+        echo "whoami..." & whoami
         sh '''
           asciidoctor --version
           asciidoctor book.adoc
-          USER laurileskinen
-          mkdir -p /Users/laurileskinen/Documents/Programming/adocs_temp
-          USER jenkins
-          cp -r /Users/laurileskinen/.jenkins/workspace/Adoc ./Users/laurileskinen/Documents/Programming/adocs_temp
         '''
       }
     }
