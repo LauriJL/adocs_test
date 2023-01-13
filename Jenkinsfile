@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo "Current workspace is $WORKSPACE"
         sh '''
+          docker ps
           asciidoctor --version
           asciidoctor book.adoc
         '''
