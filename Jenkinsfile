@@ -13,7 +13,7 @@ pipeline {
   }
   post {
         always {
-            archiveArtifacts artifacts: '**', onlyIfSuccessful: true
+            archiveArtifacts artifacts: '**/*.html', onlyIfSuccessful: true
         }
     }
 }
