@@ -10,5 +10,13 @@ pipeline {
         '''
       }
     }
+    stage('Push to git'){
+      steps{
+      sh '''
+        git remote add origin git@github.com/LauriJL/adocs_test.git 
+        git push -u origin dev
+      '''
+      }
+    }
   }
 }
