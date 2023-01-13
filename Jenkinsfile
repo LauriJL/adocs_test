@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo "Current workspace is $WORKSPACE"
         sh '''
-          whoami
           asciidoctor --version
           asciidoctor book.adoc
         '''
