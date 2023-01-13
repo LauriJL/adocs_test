@@ -7,7 +7,7 @@ pipeline {
         sh '''
           asciidoctor --version
           asciidoctor book.adoc
-          USER root
+          USER laurileskinen
           mkdir -p /Users/laurileskinen/Documents/Programming/adocs_temp
           USER jenkins
           cp -r /Users/laurileskinen/.jenkins/workspace/Adoc ./Users/laurileskinen/Documents/Programming/adocs_temp
