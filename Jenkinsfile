@@ -14,6 +14,9 @@ pipeline {
   post {
     always {
       echo "Post OK!"
+      sh '''
+      COPY /Users/laurileskinen/.jenkins/workspace/Adoc /A /Users/laurileskinen/Documents/Programming/adocs_temp /A
+      '''
     }
   }
 }
