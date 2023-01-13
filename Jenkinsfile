@@ -15,8 +15,8 @@ pipeline {
     always {
       echo "Post OK!"
       sh '''
-      sudo chmod -R 755 /Users/laurileskinen/Documents/Programming/adocs_temp
-      cp -r /Users/laurileskinen/.jenkins/workspace/Adoc /Users/laurileskinen/Documents/Programming/adocs_temp
+      chmod -R 755 /Users/laurileskinen/Documents/Programming/adocs_temp
+      cp -r /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs_temp
       '''
     }
   }
