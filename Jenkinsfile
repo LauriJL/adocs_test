@@ -5,8 +5,7 @@ pipeline {
       steps {
         sh '''
           asciidoctor --version
-          git --version
-          curl --version
+          asciidcotor book.adoc
         '''
       }
     }
