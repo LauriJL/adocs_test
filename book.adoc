@@ -1,4 +1,4 @@
-= Lorem ipsum dolor bbbbbb
+= Lorem ipsum dolor
 :toc: left
 :toc-title: Laborum
  
