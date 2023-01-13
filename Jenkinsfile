@@ -7,9 +7,13 @@ pipeline {
         sh '''
           asciidoctor --version
           asciidoctor book.adoc
-          archiveArtifacts artifacts: '', followSymlinks: false
         '''
       }
     }
   }
+  post {
+        always {
+            archiveArtifacts artifacts: 'book.hmtl', onlyIfSuccessful: true
+        }
+    }
 }
