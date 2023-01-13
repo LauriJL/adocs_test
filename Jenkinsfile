@@ -13,6 +13,7 @@ pipeline {
     stage('Push to git'){
       steps{
       sh '''
+        git config --global --add safe.directory /Users/laurileskinen/.jenkins/workspace/Adoc
         git remote add origin git@github.com/LauriJL/adocs_test.git 
         git push -u origin dev
       '''
