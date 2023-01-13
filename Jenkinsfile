@@ -4,8 +4,8 @@ pipeline {
     stage('Build hmtl doc') {
       steps {
         echo "Current workspace is $WORKSPACE"
-        echo "whoami..." & whoami
         sh '''
+          whoami
           asciidoctor --version
           asciidoctor book.adoc
         '''
