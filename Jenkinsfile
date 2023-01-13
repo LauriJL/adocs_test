@@ -5,7 +5,8 @@ pipeline {
       steps {
         sh '''
           asciidoctor --version
-          asciidcotor book.adoc
+          docker run asciidoctor/docker-asciidoctor:lts
+          asciidoctor book.adoc
         '''
       }
     }
