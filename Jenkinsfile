@@ -7,6 +7,7 @@ pipeline {
         sh '''
           asciidoctor --version
           asciidoctor book.adoc
+          archiveArtifacts artifacts: '', followSymlinks: false
         '''
       }
     }
