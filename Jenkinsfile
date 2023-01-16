@@ -18,6 +18,7 @@ pipeline {
       }
     }
     stage ('Copy artifact to local'){
+      agent any
       steps {
         sh '''
         #!/bin/bash
