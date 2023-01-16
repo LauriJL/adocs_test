@@ -3,13 +3,6 @@ pipeline {
     docker { image 'asciidoctor/docker-asciidoctor' }
     }
   stages {
-    stage ('Run docker') {
-           steps {
-           sh '''
-            docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
-           '''
-           }
-    }
     stage('Build hmtl doc') {
       steps {
         echo "Current workspace is $WORKSPACE"
