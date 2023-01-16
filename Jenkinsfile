@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  gent { dockerfile true }
   stages {
     stage('Get version number') {
       steps {
