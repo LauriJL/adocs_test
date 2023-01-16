@@ -31,6 +31,6 @@ Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saep
 // Set caption for figures
 // for the rest of the document
 // to the value Logo.
-:figure-caption: Kuva
+:figure-caption: Image
 
 image::images/LauriB.jpg[]
