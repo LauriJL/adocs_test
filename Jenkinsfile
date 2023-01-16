@@ -22,7 +22,7 @@ pipeline {
   post {
         always {
             sh '''
-            cp /Users/laurileskinen/.jenkins/workspace/Adoc /Users/laurileskinen/Documents/Programming/adocs
+            cp /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs
             '''
         }
     }
