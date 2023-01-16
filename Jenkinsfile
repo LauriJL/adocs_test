@@ -1,7 +1,8 @@
 pipeline {
-  agent { dockerfile true }
+  agent any
   stages {
     stage('Build hmtl doc') {
+      agent { dockerfile true }
       steps {
         echo "Current workspace is $WORKSPACE"
         sh '''
