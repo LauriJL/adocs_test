@@ -21,7 +21,7 @@ pipeline {
     stage ('Copy artifact'){
       steps {
         sh '''
-        cp ${JENKINS_HOME}/jobs/workspace/Adoc/**.html /Users/laurileskinen/Documents/Programming/adocs
+        cp ${JENKINS_HOME}/jobs/workspace/Adoc/ /Users/laurileskinen/Documents/Programming/adocs
         '''
       }
     }
