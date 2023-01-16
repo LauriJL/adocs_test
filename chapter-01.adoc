@@ -33,4 +33,4 @@ Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saep
 // to the value Logo.
 :figure-caption: Kuva
 
-image::images/Image-050122-123655.753.png[]
+image::images/LauriB.jpg[]
