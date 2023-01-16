@@ -1,5 +1,7 @@
 pipeline {
-  agent { dockerfile true }
+  agent { 
+    docker { image 'asciidoctor/docker-asciidoctor' }
+    }
   stages {
     stage ('Run docker') {
            steps {
