@@ -19,3 +19,16 @@ CHANGE AT 1431 hrs Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
 |333
 |At vero eos et accusamus et iusto odio dignissimos ducimus
 |===
+
+== 1.3 Image
+
+Karttanäkymän sivussa sijaitsevat **Karttatyökalut**. Aktivoidaksesi *Karttatyökalun* paina sitä näytöllä kerran, jolloin se muuttuu harmaasta oranssiksi. Oranssi väri tarkoittaa, että työkalu on päällä. Paina sitä uudelleen sammuttaaksesi sen.
+
+// Default the figure caption
+// label is Figure.
+.Karttatyökalut sijaitsevat oletuksena karttanäkymän oikeassa laidassa. Symbolit näkyvät oransseina niiden ollessa aktivoituina.
+
+// Set caption for figures
+// for the rest of the document
+// to the value Logo.
+:figure-caption: Kuva
