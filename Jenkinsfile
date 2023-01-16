@@ -18,12 +18,10 @@ pipeline {
         echo "Artifact created"
       }
     }
-    stage ('Copy artifact'){
-      steps {
-        sh '''
-        cp ${JENKINS_HOME}/jobs/workspace/Adoc/ /Users/laurileskinen/Documents/Programming/adocs
-        '''
-      }
-    }
   }
+  post {
+        always {
+            sh 'p ${JENKINS_HOME}/jobs/workspace/Adoc/ /Users/laurileskinen/Documents/Programming/adocs'
+        }
+    }
 }
