@@ -21,7 +21,7 @@ pipeline {
   }
   post {
         always {
-            sh ''''
+            sh '''
             !/bin/bash
             cp ${JENKINS_HOME}/jobs/workspace/Adoc/ /Users/laurileskinen/Documents/Programming/adocs
             '''
