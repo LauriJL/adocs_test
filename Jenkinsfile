@@ -5,6 +5,7 @@ pipeline {
       agent { dockerfile true }
       steps {
         echo "Current workspace is $WORKSPACE"
+        echo "Build number is ${currentBuild.number}"
         sh '''
           asciidoctor --version
           asciidoctor book.adoc
