@@ -1,10 +1,6 @@
 pipeline {
   agent { dockerfile true }
   stages {
-    stage('Initialize'){
-        def dockerHome = tool 'MyDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
     stage('Get version number') {
       steps {
         echo "Current workspace is $WORKSPACE"
