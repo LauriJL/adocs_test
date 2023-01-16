@@ -17,11 +17,11 @@ pipeline {
         echo "Artifact created"
       }
     }
-    stage ('Copy artifact'){
+    stage ('Copy artifact to local'){
       steps {
         sh '''
         #!/bin/bash
-        cp /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs
+        cp /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs_output
         '''
       }
     }
