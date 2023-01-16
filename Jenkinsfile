@@ -17,14 +17,14 @@ pipeline {
         echo "Artifact created"
       }
     }
-    stage ('Copy artifact to local'){
-      agent any
-      steps {
-        sh '''
-        #!/bin/bash
-        cp /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs_output
-        '''
-      }
-    }
   }
+  post { 
+        always { 
+            echo 'Post build started'
+            sh '''
+              #!/bin/bash
+              cp /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs_output
+              '''
+        }
+    }
 }
