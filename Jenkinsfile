@@ -1,14 +1,13 @@
 pipeline {
   agent { 
-    docker { image 'asciidoctor/docker-asciidoctor' }
+    docker { image 'node:16.13.1-alpine' }
     }
   stages {
     stage('Build hmtl doc') {
       steps {
         echo "Current workspace is $WORKSPACE"
         sh '''
-          asciidoctor --version
-          asciidoctor book.adoc
+          node --version
         '''
       }
     }
