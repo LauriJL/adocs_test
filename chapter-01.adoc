@@ -32,3 +32,5 @@ Karttanäkymän sivussa sijaitsevat **Karttatyökalut**. Aktivoidaksesi *Karttat
 // for the rest of the document
 // to the value Logo.
 :figure-caption: Kuva
+
+image::images/Image-050122-123655.753.png[]
