@@ -1,3 +1,3 @@
 FROM asciidoctor/docker-asciidoctor
 
-RUN apk add -U git curl
+RUN apk add -U 
