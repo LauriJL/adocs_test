@@ -1,15 +1,9 @@
 pipeline {
-  agent { 
-    docker { image 'node:16.13.1-alpine' }
-    }
+  agent any
   stages {
     stage('Get version number') {
       steps {
         echo "Current workspace is $WORKSPACE"
-        sh '''
-        docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/jenkins_home -v $(which docker):/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean
-          node --version
-        '''
       }
     }
   }
