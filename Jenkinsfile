@@ -18,13 +18,4 @@ pipeline {
       }
     }
   }
-  post { 
-        always { 
-            echo 'Post build started'
-            sh '''
-              #!/bin/bash
-              cp /Users/laurileskinen/.jenkins/workspace/Adoc/book.html /Users/laurileskinen/Documents/Programming/adocs_output
-              '''
-        }
-    }
 }
