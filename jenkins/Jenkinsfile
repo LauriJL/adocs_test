@@ -1,5 +1,8 @@
 pipeline {
-  agent { dockerfile true }
+  agent { dockerfile 
+         {customWorkspace '/jenkins'
+          filename 'Dockerfile'}
+        }
   stages {
     stage('Build hmtl doc') {  
       steps {
