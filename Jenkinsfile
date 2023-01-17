@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Create artifact of html'){
       steps {
-        archiveArtifacts artifacts: '/**/*, onlyIfSuccessful: true
+        archiveArtifacts artifacts: '/**/*', onlyIfSuccessful: true
         echo "Artifact created"
       }
     }
