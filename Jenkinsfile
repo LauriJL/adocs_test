@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Create artifact of html'){
       steps {
-        archiveArtifacts artifacts: '**/*', excludes: '**/Jenkinsfile, **/Dockerfile, **/*.adoc', onlyIfSuccessful: true
+        archiveArtifacts artifacts: '**/*', excludes: '**/Jenkinsfile, **/Dockerfile, **/*.adoc, **/*.md', onlyIfSuccessful: true
         echo "Artifact created"
       }
     }
