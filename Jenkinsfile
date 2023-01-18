@@ -10,6 +10,7 @@ pipeline {
         sh '''
           asciidoctor --version
           asciidoctor book.adoc
+          mv book.html KeyMobile2_user_manual.html
         '''
       }
     }
