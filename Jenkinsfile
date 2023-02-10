@@ -17,21 +17,21 @@ pipeline {
             script {
               try {
                 timeout(time: 30, unit: 'SECONDS') {
+		  echo "in timer..."
                   input 'Create HTML files?'
                 }
-                echo "timeout"
               } catch(err) {
                 currentBuild.result = 'SUCCESS'
                 return
               }
-              Echo “with prompt”
+              echo "with prompt"
               echo "Current workspace is $WORKSPACE"
-	            echo "Build number is ${currentBuild.number}"
-	            sh '''
-	              asciidoctor --version
-	              asciidoctor book.adoc
-	              mv book.html user_manual.html
-	              '''
+	      echo "Build number is ${currentBuild.number}"
+	      sh '''
+	        asciidoctor --version
+	        asciidoctor book.adoc
+	        mv book.html user_manual.html
+	      '''
             }
           } else {
             echo "WITHOUT prompt"
