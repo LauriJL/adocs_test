@@ -21,6 +21,7 @@ pipeline {
                   input 'Create HTML files?'
                 }
               } catch(err) {
+		echo "aborted/timeout"
                 currentBuild.result = 'SUCCESS'
                 return
               }
