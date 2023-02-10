@@ -18,7 +18,7 @@ pipeline {
               try {
                 timeout(time: 30, unit: 'SECONDS') {
 		  echo "in timer..."
-                  input 'Create HTML files?'
+                  input "Create HTML files?"
                 }
               } catch(err) {
 		echo "aborted/timeout"
